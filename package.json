@@ -4,7 +4,7 @@
   "description": "Less ====",
   "main": "index.js",
   "scripts": {
-    "build": "lessc dev/style.less > style.css",
+    "build": "lessc dev/style.less --clean-css=\"--s1 --advanced\" > style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/efernandesng/Less#readme",
   "devDependencies": {
-    "less": "^3.9.0"
+    "less": "^3.9.0",
+    "less-plugin-clean-css": "^1.5.1"
   }
 }
