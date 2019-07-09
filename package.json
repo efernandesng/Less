@@ -4,7 +4,8 @@
   "description": "Less ====",
   "main": "index.js",
   "scripts": {
-    "build": "lessc dev/style.less --clean-css=\"--s1 --advanced\" > style.css",
+    "build:less": "lessc dev/style.less --clean-css=\"--advanced --keepSpecialComments=1\" > style.css",
+    "build:js": "uglifyjs js/dev/theme.js -o js/theme.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/efernandesng/Less#readme",
   "devDependencies": {
     "less": "^3.9.0",
-    "less-plugin-clean-css": "^1.5.1"
+    "less-plugin-clean-css": "^1.5.1",
+    "uglify-js": "^3.6.0"
   }
 }
